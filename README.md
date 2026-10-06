@@ -2,7 +2,7 @@
 
 ![Avatar de Nicolás Escudero: iniciales NE](assets/avatar.svg)
 
-Presentación estática de un proyecto académico de bases de datos relacionales con PostgreSQL.
+Portafolio profesional de bioquímica, diagnóstico molecular y educación científica, con un proyecto académico de bases de datos relacionales con PostgreSQL.
 
 ## Visualización
 
@@ -12,7 +12,7 @@ Para visualizarlo localmente, abra `index.html` en un navegador. El sitio no req
 
 ## Contenido
 
-- `index.html`: perfil académico, presentación del proyecto y visor de código.
+- `index.html`: perfil profesional, trayectoria, capacidades y proyecto SQL con pestañas de modelo, código y resultados.
 - `assets/avatar.svg`: avatar de iniciales NE.
 - `proyectos/prueba-sql/`: solución SQL, instrucciones, desarrollo técnico y capturas de resultados.
 
@@ -26,3 +26,7 @@ Mi experiencia incluye diagnóstico molecular y docencia de ciencias. Me interes
 
 - LinkedIn: https://www.linkedin.com/in/nicolas-escudero-60ab14252/
 - Correo: nicolaseduardo.escuderocabello@gmail.com
+
+## Diseño y navegación
+
+La presentación organiza la trayectoria entre laboratorio, aula y datos. Incluye experiencia profesional con fechas, capacidades diferenciadas y un caso académico documentado. Las pestañas del proyecto admiten navegación mediante flechas, Inicio y Fin.

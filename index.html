@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Portafolio académico de Nicolás Escudero: modelado relacional, consultas SQL e integridad de datos con PostgreSQL."><title>Nicolás Escudero · Portafolio</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f6;color:#17343b;font:17px/1.65 system-ui}main,header,footer{max-width:1120px;margin:auto;padding:32px}header{display:flex;justify-content:space-between;gap:22px;align-items:center}nav{display:flex;gap:25px;flex-wrap:wrap}a{color:#075e60;text-underline-offset:4px}a:focus-visible,summary:focus-visible{outline:3px solid #b06418;outline-offset:5px}h1{font-size:clamp(34px,6vw,60px);line-height:1.12;margin:14px 0}h2{font-size:30px;line-height:1.25}h3{font-size:20px}section{margin-bottom:58px}.hero{display:grid;grid-template-columns:1fr 170px;gap:45px;padding:36px 0}.hero img{width:150px}.eyebrow{font-size:13px;letter-spacing:1.4px;text-transform:uppercase;color:#526c70}.lede{font-size:21px;max-width:730px}.note{padding:16px 20px;background:#eef0e7;border-left:4px solid #a78846;font-size:15px}.project{padding:30px;background:white;border:1px solid #d5dfdc;border-radius:12px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.metric{font-size:36px;font-weight:700;color:#116860}.actions{display:flex;gap:15px;flex-wrap:wrap}.button{display:inline-block;padding:10px 18px;background:#17454f;color:white;border-radius:5px;text-decoration:none}.secondary{background:#edf4f1;color:#17343b}details{margin:14px 0;border:1px solid #cad8d2;background:white}summary{padding:13px;cursor:pointer;font-weight:600}pre{font:13px/1.5 Consolas,monospace;overflow:auto;padding:18px;max-height:480px;border-top:1px solid #cad8d2}footer{font-size:13px;color:#53686b;border-top:1px solid #cad8d2}.skip{position:absolute;left:-9999px}.skip:focus{left:20px;top:10px}@media(max-width:650px){main,header,footer{padding:22px}.hero{grid-template-columns:1fr;gap:12px}.hero img{width:85px;grid-row:1}.grid{grid-template-columns:1fr}.project{padding:20px}header{align-items:flex-start;flex-direction:column}nav{gap:16px}.lede{font-size:19px}}
+html{scroll-behavior:smooth}code{tab-size:4}.project img{max-width:100%;height:auto}.grid>*{min-width:0}.metric{font-size:27px}.tag{display:inline-block;padding:4px 10px;margin:0 6px 8px 0;border:1px solid #cad8d2;border-radius:20px;font-size:13px}.source{font-size:14px}.hero img{height:auto}h1{overflow-wrap:anywhere}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+#contacto a{overflow-wrap:anywhere}</style></head>
+<body><a class="skip" href="#contenido">Ir al contenido</a><header><strong>NE · Portafolio</strong><nav aria-label="Navegación principal"><a href="#perfil">Perfil</a><a href="#proyecto-sql">Proyecto</a><a href="#codigo">Código</a><a href="#practicas">Buenas prácticas</a><a href="#contacto">Contacto</a></nav></header><main id="contenido">
+<section class="hero" id="perfil"><div><p class="eyebrow">Bioquímica · Python · Datos</p><h1>Nicolás Escudero Cabello</h1><p class="lede">Formación científica y proyectos de desarrollo con Python y bases de datos.</p><p>Licenciado en Bioquímica por la Universidad de Antofagasta. Actualmente me desempeño como Profesional Apoyo Biotecnología en el Proyecto CTI Estudiantil P3 - Eje Ciencias de la Universidad de Atacama. Mi experiencia incluye diagnóstico molecular y docencia de ciencias. Este portafolio presenta un proyecto académico de bases de datos desarrollado durante mi formación Full Stack con Python.</p><a class="button" href="#proyecto-sql">Explorar el proyecto SQL</a></div><img src="assets/avatar.svg" width="160" height="160" alt="Iniciales NE de Nicolás Escudero"></section>
+<section id="proyecto-sql" class="project"><p class="eyebrow">Trabajo seleccionado · Módulo 05</p><h2>Consultas e integridad en PostgreSQL</h2><p>Prueba de Fundamentos de bases de datos relacionales. Dos casos académicos: clasificar películas mediante etiquetas y analizar respuestas de usuarios a preguntas.</p><p><span class="tag">PostgreSQL</span><span class="tag">SQL</span><span class="tag">Modelado relacional</span></p><div class="grid"><div><h3>Problema y solución</h3><p>Representar relaciones entre entidades, contar asociaciones y respuestas correctas sin perder registros con resultado cero, y proteger la integridad de los datos mediante claves y restricciones.</p><h3>Decisiones del modelo</h3><p>Una tabla intermedia representa la relación N:N entre películas y etiquetas. Las consultas usan LEFT JOIN para conservar registros sin coincidencias. El modelo de preguntas incorpora claves foráneas, eliminación en cascada, edad mínima y correo único.</p></div><div><p class="metric">De los datos a las relaciones</p><p>El conjunto de películas muestra tres y dos etiquetas en los primeros registros, y cero en los restantes. Las consultas de respuestas incluyen también usuarios y preguntas sin aciertos.</p><p><strong>Alcance:</strong> ejercicio académico con datos ficticios. Los archivos SQL se ejecutan en una base nueva; este sitio presenta el código y sus resultados.</p><p><strong>Herramientas:</strong> PostgreSQL, SQL y psql.</p></div></div><div class="actions"><a class="button" href="#codigo">Revisar el código</a><a class="button secondary" href="proyectos/prueba-sql/DESARROLLO.pdf">Ver desarrollo y capturas</a><a class="button secondary" href="proyectos/prueba-sql/README.md">Leer instrucciones</a></div><h3>Creación de las tablas</h3><img src="proyectos/prueba-sql/evidencias/01_modelos.png" width="1440" height="1000" loading="lazy" alt="Captura de sentencias SQL y consulta de tablas en pgAdmin"></section>
+<section id="codigo"><h2>Código de la prueba</h2><p>La solución se organiza en creación de la base, estructura y datos, consultas e instrucciones de ejecución. El visor permite leer cada archivo sin ejecutar sentencias.</p><details><summary>01_crear_base.sql</summary><pre><code>\set ON_ERROR_STOP on
+\encoding UTF8
+-- Crear una base NUEVA. Si existe, este script se detiene sin borrarla.
+CREATE DATABASE &quot;prueba_fundamentos_nicolas_407&quot;;
+\connect &quot;prueba_fundamentos_nicolas_407&quot;
+SELECT current_database() AS base_de_datos;
+</code></pre></details><details><summary>02_estructura_y_datos.sql</summary><pre><code>-- Parte I. N:N mediante tabla intermedia con clave compuesta.
+CREATE TABLE peliculas (id integer PRIMARY KEY,nombre varchar(255),anno integer);
+CREATE TABLE tags (id integer PRIMARY KEY,tag varchar(32));
+CREATE TABLE pelicula_tag (
+    pelicula_id integer REFERENCES peliculas(id),
+    tag_id integer REFERENCES tags(id),
+    PRIMARY KEY (pelicula_id,tag_id)
+);
+INSERT INTO peliculas VALUES (1,&#x27;Película Uno&#x27;,2020),(2,&#x27;Película Dos&#x27;,2021),
+(3,&#x27;Película Tres&#x27;,2022),(4,&#x27;Película Cuatro&#x27;,2023),(5,&#x27;Película Cinco&#x27;,2024);
+INSERT INTO tags VALUES (1,&#x27;Drama&#x27;),(2,&#x27;Aventura&#x27;),(3,&#x27;Comedia&#x27;),(4,&#x27;Familiar&#x27;),(5,&#x27;Suspenso&#x27;);
+INSERT INTO pelicula_tag VALUES (1,1),(1,2),(1,3),(2,4),(2,5);
+-- Parte II. Tipos y nombres según el diagrama proporcionado.
+CREATE TABLE preguntas (id integer PRIMARY KEY,pregunta varchar(255),respuesta_correcta varchar);
+CREATE TABLE usuarios (id integer PRIMARY KEY,nombre varchar(255),edad integer);
+CREATE TABLE respuestas (
+    id integer PRIMARY KEY,
+    respuesta varchar(255),
+    usuario_id integer REFERENCES usuarios(id),
+    pregunta_id integer REFERENCES preguntas(id)
+);
+INSERT INTO preguntas VALUES
+(1,&#x27;¿Cuánto es 2 + 2?&#x27;,&#x27;4&#x27;),(2,&#x27;¿Capital de Chile?&#x27;,&#x27;Santiago&#x27;),
+(3,&#x27;¿Lenguaje de este curso?&#x27;,&#x27;Python&#x27;),(4,&#x27;¿Cuánto es 3 + 3?&#x27;,&#x27;6&#x27;),
+(5,&#x27;¿Motor de base de datos utilizado?&#x27;,&#x27;PostgreSQL&#x27;);
+INSERT INTO usuarios VALUES (1,&#x27;Ana&#x27;,20),(2,&#x27;Bruno&#x27;,21),(3,&#x27;Carla&#x27;,22),(4,&#x27;Diego&#x27;,23),(5,&#x27;Elena&#x27;,24);
+INSERT INTO respuestas VALUES (1,&#x27;4&#x27;,1,1),(2,&#x27;4&#x27;,2,1),(3,&#x27;Santiago&#x27;,3,2),
+(4,&#x27;Java&#x27;,4,3),(5,&#x27;7&#x27;,5,4);
+</code></pre></details><details><summary>03_consultas.sql</summary><pre><code>-- 3. LEFT JOIN mantiene películas sin tags; count(tag_id) devuelve cero.
+SELECT p.id,p.nombre,count(pt.tag_id) AS cantidad_tags FROM peliculas p
+LEFT JOIN pelicula_tag pt ON pt.pelicula_id=p.id GROUP BY p.id,p.nombre ORDER BY p.id;
+-- 6. Aciertos por usuario, incluyendo cero.
+SELECT u.id,u.nombre,count(r.id) FILTER (WHERE r.respuesta=p.respuesta_correcta) AS correctas
+FROM usuarios u LEFT JOIN respuestas r ON r.usuario_id=u.id
+LEFT JOIN preguntas p ON p.id=r.pregunta_id GROUP BY u.id,u.nombre ORDER BY u.id;
+-- 7. Usuarios distintos que acertaron cada pregunta, incluyendo cero.
+SELECT p.id,p.pregunta,count(DISTINCT r.usuario_id) AS usuarios_correctos FROM preguntas p
+LEFT JOIN respuestas r ON r.pregunta_id=p.id AND r.respuesta=p.respuesta_correcta
+GROUP BY p.id,p.pregunta ORDER BY p.id;
+-- 8. Modificar la FK para habilitar cascada y borrar el primer usuario.
+ALTER TABLE respuestas DROP CONSTRAINT respuestas_usuario_id_fkey;
+ALTER TABLE respuestas ADD CONSTRAINT respuestas_usuario_id_fkey
+FOREIGN KEY(usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE;
+DELETE FROM usuarios WHERE id=1;
+SELECT count(*) AS respuestas_del_usuario_eliminado FROM respuestas WHERE usuario_id=1;
+-- 9. Impedir edades inferiores a 18.
+ALTER TABLE usuarios ADD CONSTRAINT edad_adulta CHECK (edad&gt;=18);
+-- 10. Añadir email único a la tabla existente.
+ALTER TABLE usuarios ADD COLUMN email varchar(255) UNIQUE;
+</code></pre></details><details><summary>ejecutar.sql</summary><pre><code>\set ON_ERROR_STOP on
+\encoding UTF8
+\pset pager off
+\ir 01_crear_base.sql
+\ir 02_estructura_y_datos.sql
+\ir 03_consultas.sql
+\q
+</code></pre></details></section>
+<section id="practicas"><h2>Buenas prácticas aplicadas</h2><div class="grid"><div><h3>Datos e instrucciones</h3><p>Datos ficticios, relaciones explícitas y restricciones de integridad. El README describe el orden de ejecución y la creación de una base de práctica independiente.</p></div><div><h3>Presentación accesible</h3><p>Navegación por secciones, acceso al contenido mediante teclado, contraste legible y adaptación a pantallas pequeñas. El desarrollo y el código se enlazan directamente desde el proyecto.</p></div></div></section>
+<section id="contacto"><h2>Contacto profesional</h2><p>Conoce mi trayectoria o contáctame para conversar sobre proyectos de ciencias, biotecnología y desarrollo con Python.</p><div class="actions"><a class="button" href="https://www.linkedin.com/in/nicolas-escudero-60ab14252/">Perfil de LinkedIn</a><a class="button secondary" href="mailto:nicolaseduardo.escuderocabello@gmail.com">nicolaseduardo.escuderocabello@gmail.com</a></div></section></main><footer>Nicolás Escudero · Portafolio académico · 2026. Los datos de los ejercicios SQL son ficticios.</footer></body></html>

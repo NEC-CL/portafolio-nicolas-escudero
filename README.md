@@ -1,10 +1,14 @@
-# Portafolio de Nicolás Escudero
+# Portafolio de Nicolás Escudero Cabello
+
+![Avatar de Nicolás Escudero: iniciales NE](assets/avatar.svg)
 
 Presentación estática de un proyecto académico de bases de datos relacionales con PostgreSQL.
 
 ## Visualización
 
-Abra `index.html` en un navegador. El sitio no requiere instalación ni dependencias externas. También puede servir esta carpeta mediante cualquier servidor de archivos estáticos.
+Portafolio público: https://nec-cl.github.io/portafolio-nicolas-escudero/
+
+Para visualizarlo localmente, abra `index.html` en un navegador. El sitio no requiere instalación ni dependencias externas. También puede servir esta carpeta mediante cualquier servidor de archivos estáticos.
 
 ## Contenido
 
@@ -16,7 +20,9 @@ El sitio solo presenta archivos estáticos. PostgreSQL debe ejecutarse por separ
 
 ## Autor y contacto
 
-Nicolás Escudero Cabello, licenciado en Bioquímica por la Universidad de Antofagasta. Profesional Apoyo Biotecnología, Proyecto CTI Estudiantil P3 - Eje Ciencias, Universidad de Atacama.
+Nicolás Escudero Cabello, de Copiapó, Chile, licenciado en Bioquímica por la Universidad de Antofagasta. Profesional Apoyo Biotecnología, Proyecto CTI Estudiantil P3 - Eje Ciencias, Universidad de Atacama.
+
+Mi experiencia incluye diagnóstico molecular y docencia de ciencias. Me interesa vincular las ciencias y la biotecnología con el desarrollo de soluciones computacionales, Python y bases de datos.
 
 - LinkedIn: https://www.linkedin.com/in/nicolas-escudero-60ab14252/
 - Correo: nicolaseduardo.escuderocabello@gmail.com
